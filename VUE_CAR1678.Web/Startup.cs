@@ -24,6 +24,7 @@ namespace VUE_CAR1678.Web
 {
     public class Startup
     {
+        private string cadenaConexion;
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -34,9 +35,14 @@ namespace VUE_CAR1678.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //string cadenaConexion = "";
+            if (File.Exists(@"C:\programador.tx")) {
+                cadenaConexion = Configuration.GetConnectionString("ConexionProgramacion");
+            } else {
+                cadenaConexion = Configuration.GetConnectionString("Conexion");
+            }
             services.AddControllers();
-            services.AddDbContext<Context>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("Conexion")));
+            services.AddDbContext<Context>(options => options.UseSqlServer(cadenaConexion));
 
             //Cors
             //services.ConfigureCors();
