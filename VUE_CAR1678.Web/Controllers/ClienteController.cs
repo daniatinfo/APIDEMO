@@ -34,5 +34,19 @@ namespace VUE_CAR1678.Web.Controllers {
 
             return await Task.FromResult(Ok(clientes));
         }
+
+        /// <summary>
+        /// Retorna todos los clientes por filtro
+        /// </summary>
+        // POST: api/Cliente/GetClientes
+        [HttpGet("[action]")]
+        [ProducesResponseType(404)]
+        [ProducesResponseType(typeof(String), 200)]
+        public async Task<IActionResult> GetClientesByFilter() {
+            //Devuelve todos los clientes por un filtro
+            var clientes = _context.CLIENTES.ToList();
+
+            return await Task.FromResult(Ok(clientes));
+        }
     }
 }
