@@ -7,9 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entidades", "VUE_CAR1678.En
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Datos", "VUE_CAR1678.Datos\Datos.csproj", "{3CE95B21-25BD-4BAC-B627-80B905CCBF45}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebBonet", "VUE_CAR1678.Web\WebBonet.csproj", "{D3DFCEF3-30AC-47E7-833D-03A50335A9D5}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAnnaEco", "WebAnnaEco\WebAnnaEco.csproj", "{C0E8C85E-CF1C-4A0B-99A0-ECA7085F62DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web", "VUE_CAR1678.Web\Web.csproj", "{D3DFCEF3-30AC-47E7-833D-03A50335A9D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +27,6 @@ Global
 		{D3DFCEF3-30AC-47E7-833D-03A50335A9D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3DFCEF3-30AC-47E7-833D-03A50335A9D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3DFCEF3-30AC-47E7-833D-03A50335A9D5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C0E8C85E-CF1C-4A0B-99A0-ECA7085F62DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C0E8C85E-CF1C-4A0B-99A0-ECA7085F62DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C0E8C85E-CF1C-4A0B-99A0-ECA7085F62DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C0E8C85E-CF1C-4A0B-99A0-ECA7085F62DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

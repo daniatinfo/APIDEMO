@@ -27,9 +27,12 @@ namespace VUE_CAR1678.Web.Controllers {
         [ProducesResponseType(404)]
         [ProducesResponseType(typeof(String), 200)]
         public async Task<IActionResult> GetClientes() {
+<<<<<<< HEAD
             //Devuelve todos los clientes
             //Proyecto base
             //Añado un tercer comentario en base, para añadirlo ahora en la rama.
+=======
+>>>>>>> parent of 09febc6 (Dani)
             var clientes = _context.CLIENTES.ToList();
 
             return await Task.FromResult(Ok(clientes));
