@@ -27,6 +27,8 @@ namespace VUE_CAR1678.Web.Controllers {
         [ProducesResponseType(404)]
         [ProducesResponseType(typeof(String), 200)]
         public async Task<IActionResult> GetClientes() {
+            //Devuelve todos los clientes
+            //Proyecto base
             var clientes = _context.CLIENTES.ToList();
 
             return await Task.FromResult(Ok(clientes));
