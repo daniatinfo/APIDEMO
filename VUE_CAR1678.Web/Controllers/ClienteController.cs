@@ -36,6 +36,22 @@ namespace VUE_CAR1678.Web.Controllers {
         }
 
         /// <summary>
+        /// Retorna todos los clientes
+        /// </summary>
+        // POST: api/Cliente/GetClientes
+        [HttpGet("[action]")]
+        [ProducesResponseType(404)]
+        [ProducesResponseType(typeof(String), 200)]
+        public async Task<IActionResult> GetClientesV2() {
+            //Devuelve todos los clientes
+            //Proyecto base
+            //Añado un tercer comentario en base, para añadirlo ahora en la rama.
+            var clientes = _context.CLIENTES.Select(x=> new { x.CODCLI, x.CODPAIS});
+
+            return await Task.FromResult(Ok(clientes));
+        }
+
+        /// <summary>
         /// Retorna todos los clientes por filtro
         /// </summary>
         // POST: api/Cliente/GetClientes

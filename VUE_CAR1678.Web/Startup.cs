@@ -35,8 +35,7 @@ namespace VUE_CAR1678.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddDbContext<Context>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("Conexion")));
+            services.AddDbContext<Context>(options => options.UseSqlServer(Configuration.GetConnectionString("Conexion")));
 
             //Cors
             //services.ConfigureCors();
