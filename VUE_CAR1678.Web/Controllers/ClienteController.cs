@@ -29,6 +29,7 @@ namespace VUE_CAR1678.Web.Controllers {
         public async Task<IActionResult> GetClientes() {
             //Devuelve todos los clientes
             //Proyecto base
+            //Añado un tercer comentario en base, para añadirlo ahora en la rama.
             var clientes = _context.CLIENTES.ToList();
 
             return await Task.FromResult(Ok(clientes));
