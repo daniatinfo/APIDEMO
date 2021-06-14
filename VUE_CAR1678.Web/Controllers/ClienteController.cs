@@ -29,7 +29,21 @@ namespace VUE_CAR1678.Web.Controllers {
         public async Task<IActionResult> GetClientes() {
             //Devuelve todos los clientes
             //Proyecto bonet
-            //Tercer comentario solo en bonet
+            //Añado un tercer comentario en bonet, para añadirlo ahora en la rama.
+            var clientes = _context.CLIENTES.ToList();
+
+            return await Task.FromResult(Ok(clientes));
+        }
+
+        /// <summary>
+        /// Retorna todos los clientes por filtro
+        /// </summary>
+        // POST: api/Cliente/GetClientes
+        [HttpGet("[action]")]
+        [ProducesResponseType(404)]
+        [ProducesResponseType(typeof(String), 200)]
+        public async Task<IActionResult> GetClientesByFilter() {
+            //Devuelve todos los clientes por un filtro
             var clientes = _context.CLIENTES.ToList();
 
             return await Task.FromResult(Ok(clientes));
