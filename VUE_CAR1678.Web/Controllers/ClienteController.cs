@@ -46,7 +46,7 @@ namespace VUE_CAR1678.Web.Controllers {
             //Devuelve todos los clientes
             //Proyecto base
             //Añado un tercer comentario en base, para añadirlo ahora en la rama.
-            var clientes = _context.CLIENTES.Select(x=> new { x.CODCLI, x.CODPAIS});
+            var clientes = _context.CLIENTES.Select(x=> new { x.CODCLI, x.CODPAIS, x.BLOQUEADO});
 
             return await Task.FromResult(Ok(clientes));
         }
